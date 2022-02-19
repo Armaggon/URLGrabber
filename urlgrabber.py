@@ -1,8 +1,10 @@
+# This is a simple python script that extracts all href links/values from the source code of a specified web page
+
 from urllib.request import urlopen
 import re
 import time
 
-url = str(input('[+] Target URL: '))
+url = str(input('[+] Target URL: ')) # e.g. https://linkedin.com
 try:
     html_bytes = urlopen(url)
     html = html_bytes.read().decode("utf-8")
